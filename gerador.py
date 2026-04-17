@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Gerador automático do Dashboard
+Laboratório Bem Me Quer — Gerador automático do Dashboard
 Meta Ads + Google Ads — 4 painéis completos
 """
 
@@ -266,16 +266,24 @@ def meta_ads_period(p, img_dir):
     df_t = p[p["thumb"].notna()&(p["thumb"].astype(str)!="")&(p["thumb"].astype(str)!="nan")].copy()
     if df_t.empty:
         return []
-    agg = df_t.groupby(["ad","thumb"]).agg(
+    agg = df_t.groupby(["ad","adset","campaign","thumb"]).agg(
         leads=("leads","sum"), spend=("spend","sum"),
         impressions=("impressions","sum"), link_clicks=("link_clicks","sum")
     ).reset_index().sort_values("leads", ascending=False)
     agg["cpl"] = (agg["spend"]/agg["leads"]).where(agg["leads"]>0).round(2)
     agg["ctr"] = (agg["link_clicks"]/agg["impressions"]*100).where(agg["impressions"]>0).round(2)
     result = []
-    for _, r in agg.drop_duplicates("ad").iterrows():
+    for _, r in agg.iterrows():
         local = download_thumb(str(r["thumb"]), img_dir)
-        result.append({"n":str(r["ad"]),"leads":int(r["leads"]),"cpl":safe(r["cpl"]),"ctr":safe(r["ctr"]),"thumb":local})
+        result.append({
+            "n": str(r["ad"]),
+            "camp": str(r["campaign"]),
+            "adset": str(r["adset"]),
+            "leads": int(r["leads"]),
+            "cpl": safe(r["cpl"]),
+            "ctr": safe(r["ctr"]),
+            "thumb": local
+        })
     return result
 
 
@@ -701,7 +709,7 @@ def inject_all(template_path,
 
 def main():
     print("=" * 60)
-    print("Dashboard Meta")
+    print("Laboratório Bem Me Quer — Dashboard Meta + Google Ads")
     print("=" * 60)
 
     # ── META ──────────────────────────────────────────────────
