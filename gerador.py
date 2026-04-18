@@ -16,19 +16,19 @@ from pathlib import Path
 # CONFIG DO CLIENTE — edite apenas esta seção
 # ══════════════════════════════════════════════════════════════════════════════
 
-SHEET_ID      = "1q5G2IfNqnROatZ1W4sy9KqgbqmpPsOUmYbhhGf6wS7E"
+SHEET_ID      = "1C9u-dG2EWQkPA3yHatw7uBoMuSYrlgOsbUq8wLHa7ck"
 TEMPLATE_FILE = "dashboard_template.html"
 OUTPUT_FILE   = "index.html"
 
-NOME_CLIENTE  = "MCI Imobiliária"  # aparece na sidebar e no <title>
-LOGO_LETRA    = "MCI"      # letra dentro do ícone na sidebar
-COR_ACENTO    = "#EEAD2D"  # cor principal: sidebar ativa, badge, período (ex: "#1877f2", "#e11d48")
+NOME_CLIENTE  = "Academia Girão"  # aparece na sidebar e no <title>
+LOGO_LETRA    = "G"      # letra dentro do ícone na sidebar
+COR_ACENTO    = "#FF7420"  # cor principal: sidebar ativa, badge, período (ex: "#1877f2", "#e11d48")
 GOOGLE_ADS    = False    # False = painel Google oculto (cliente só Meta)
 META_ADS      = True     # False = painel Meta oculto (cliente só Google)
 
 # Metas de CPL — Meta Ads
-META_CPL_BOM    = 10    # ≤ este valor → verde
-META_CPL_MEDIO  = 18    # ≤ este valor → amarelo  |  acima → vermelho
+META_CPL_BOM    = 7    # ≤ este valor → verde
+META_CPL_MEDIO  = 12    # ≤ este valor → amarelo  |  acima → vermelho
 
 # Metas de CPL — Google Ads
 GOOGLE_CPL_BOM   = 10   # ≤ este valor → verde
