@@ -2,29 +2,29 @@
   "cliente": "Academia Girão",
   "cor": "#FF7420",
   "letra": "G",
-  "atualizado": "13/06/2026",
+  "atualizado": "14/06/2026",
   "meta": {
     "cplBom": 7,
     "cplMedio": 12,
     "d1": {
-      "spend": 26.35,
-      "leads": 2,
-      "cpl": 13.18
+      "spend": 105.43,
+      "leads": 10,
+      "cpl": 10.54
     },
     "d7": {
-      "spend": 339.33,
-      "leads": 41,
-      "cpl": 8.28
+      "spend": 371.63,
+      "leads": 42,
+      "cpl": 8.85
     },
     "d14": {
-      "spend": 661.48,
-      "leads": 80,
-      "cpl": 8.27
+      "spend": 766.91,
+      "leads": 90,
+      "cpl": 8.52
     },
     "d30": {
-      "spend": 1673.64,
-      "leads": 210,
-      "cpl": 7.97
+      "spend": 1665.11,
+      "leads": 195,
+      "cpl": 8.54
     }
   },
   "google": {
